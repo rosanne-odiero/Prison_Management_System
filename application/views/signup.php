@@ -5,153 +5,76 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 <head>
 	<meta charset="utf-8">
 	<title>Sign UP</title>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script type="text/javascript" src="<?php echo base_url()?>Prison/jquery331.js"></script>
-
-	<style>
-body {
-  background: rgb(4, 56, 199);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-body:before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: block;
-  background: rgba(2, 24, 85);
-  width: 100%;
-  height: 100%;
-}
-.form {
-  position: relative;
-  z-index: 1;
-  background: #FFFFFF;
-  max-width: 300px;
-  margin: 0 auto 100px;
-  padding: 30px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  text-align: center;
-}
-.form .thumbnail {
-  background: #fff;
-  width: 100px;
-  height: 100px;
-  margin: 0 auto 30px;
-  padding: 0px;
-  border-top-left-radius: 100%;
-  border-top-right-radius: 100%;
-  border-bottom-left-radius: 100%;
-  border-bottom-right-radius: 100%;
-  box-sizing: border-box;
-}
-.form .thumbnail img {
-  display: block;
-  width: 100%;
-}
-.form input {
-  outline: 0;
-  background: #f2f2f2;
-  width: 100%;
-  border: 0;
-  margin: 0 0 15px;
-  padding: 15px;
-  border-top-left-radius: 3px;
-  border-top-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  border-bottom-right-radius: 3px;
-  box-sizing: border-box;
-  font-size: 14px;
-}
-
-button {
-  outline: none !important;
-  border: none;
-}
-
-button:hover {
-  cursor: pointer;
-}
-#btn {
-  font-family: Ubuntu-Bold;
-  font-size: 18px;
-  color: #fff;
-  line-height: 1.2;
-  text-transform: uppercase;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding:  0px;
-  min-width: 200px;
-  height: 42px;
-  border-radius: 21px;
-  background: -webkit-linear-gradient(left, #03036E, #0804e6, #03036E);
-  position: relative;
-  z-index: 1;
-  transition: all 0.4s;
-}
-
-.form .message {
-  margin: 15px 0 0;
-  color: #b3b3b3;
-  font-size: 12px;
-}
-.form .message a {
-  color: #EF3B3A;
-  text-decoration: none;
-}
-.container {
-  position: relative;
-  z-index: 1;
-  max-width: 300px;
-  margin: 0 auto;
-}
-.container .info {
-  margin: 50px auto;
-  text-align: center;
-}
-.container .info h1 {
-  margin: 0 0 15px;
-  padding: 0;
-  font-size: 36px;
-  font-weight: 300;
-  color: white;
-}
-
-
-</style>
+		<link rel="icon" type="image/png" href="<?php echo base_url();?>images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/util.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo base_url();?>css/main.css">
 </head>
 <body>
-<div class="container">
-	<div class="info">
-	 <h1 color="white"> Jianyu Prison </h1>
-	 <h1 color="white">Login Form</h1>
-	 </div>
-	 <div class="form">
- <div class="thumbnail"><img src="<?php echo base_url();?>Prison/Images/imagefav.jpg" width="200px"/></div>
+<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="<?php echo base_url();?>images/imagefav.jpg" alt="IMG" width="200">
+				</div>
+        <div class="login100-form validate-form">
+        <span class="login100-form-title">
+						Jianyu Prison<br>
+            Register Form
+					</span>
+          
 <?php
  echo form_open('index.php/Main/signup_validation');
-echo validation_errors();
-echo "<p>Full Name";
+echo validation_errors();?>
+<p><b>Full Name</p>
+<div class="wrap-input100 input100">
+<?php
  echo form_input('fullname');
- echo "</p>";
- echo "<p>Email";
+?>
+<span class="focus-input100"></span>
+	<span class="symbol-input100">
+</span>
+    </div>
+<p><b>Email</p>
+<div class="wrap-input100 input100">
+<?php
  echo form_input('email', $this->input->post('email'));
- echo "</p>";
- echo "<p>Password";
+?>
+<span class="focus-input100"></span>
+	<span class="symbol-input100"><i class="fa fa-envelope" aria-hidden="true"></i>
+</span>
+    </div>
+<p><b>Password</P>
+<div class="wrap-input100 input100">
+<?php
  echo form_password('password');
- echo "</p>";
-  echo "<p>Confirm Password";
+?>
+<span class="focus-input100"></span>
+	<span class="symbol-input100"><i class="fa fa-lock" aria-hidden="true"></i>
+</span>
+    </div>
+ <p><b>Confirm Password</p>
+ <div class="wrap-input100 input100">
+ <?php
  echo form_password('cpassword');
- echo "</p>";
- echo "<p>";
- echo "<p>PhoneNumber";
+?>
+<span class="focus-input100"></span>
+	<span class="symbol-input100"><i class="fa fa-lock" aria-hidden="true"></i>
+</span>
+    </div>
+<p>PhoneNumber</p>
+<div class="wrap-input100 input100">
+<?php
  echo form_input('phonenumber');
- echo "</p>";?>
+ ?>
+ <span class="focus-input100"></span>
+	<span class="symbol-input100"><i class="fa fa-phone" aria-hidden="true"></i>
+</span>
+    </div>
  
  <select class="form-control selcls" name="occupation">
 			<option>Select Occupation</option>
@@ -168,9 +91,24 @@ echo "<p>Full Name";
 		</select><br>
 
  <button type="submit" id="btn">Sign Up</button>
-<?php
+
+          <div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn">
+							Register
+						</button>
+					</div>
+          <div class="text-center p-t-136">
+						<a class="txt2" href='<?php echo base_url()."index.php/Main/index"?>'>
+							Already registered?Login
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+          <?php
  echo form_close();
  ?>
- <p class="message">Already registered? </p><a href='<?php echo base_url()."index.php/Main/index"?>'>Login</a>
+</div>
+  </div>
+  </div>
+  </div>
 </body>
 </html>
