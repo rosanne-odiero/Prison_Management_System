@@ -33,7 +33,8 @@ echo form_open('index.php/Main/login_validation');
 echo validation_errors();
 ?>
 <p><b>Email</p>
-<div class="wrap-input100 input100">
+<div class="wrap-input100 input100"style="line-height: 2.5;
+padding: 4px 0px 0px 68px;">
 <?php 
 echo form_input('email',$this->input->post('email'));
  echo "</p>";
@@ -43,7 +44,8 @@ echo form_input('email',$this->input->post('email'));
 		</span>
     </div>
 			<p><b>Password</p>
- <div class="wrap-input100 input100 ">
+ <div class="wrap-input100 input100" style="line-height: 2.5;
+padding: 4px 0px 0px 68px; ">
  
 <?php
  echo form_password('password');

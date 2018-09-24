@@ -31,16 +31,18 @@ defined('BASEPATH') OR exit('No direct script access allowed');
  echo form_open('index.php/Main/signup_validation');
 echo validation_errors();?>
 <p><b>Full Name</p>
-<div class="wrap-input100 input100">
+<div class="wrap-input100 input100" style="line-height: 2.5;
+padding: 4px 0px 0px 68px;">
 <?php
  echo form_input('fullname');
 ?>
 <span class="focus-input100"></span>
-	<span class="symbol-input100">
+	<span class="symbol-input100"><i class="fa fa-user" aria-hidden="true"></i>
 </span>
     </div>
 <p><b>Email</p>
-<div class="wrap-input100 input100">
+<div class="wrap-input100 input100"style="line-height: 2.5;
+padding: 4px 0px 0px 68px;">
 <?php
  echo form_input('email', $this->input->post('email'));
 ?>
@@ -49,7 +51,8 @@ echo validation_errors();?>
 </span>
     </div>
 <p><b>Password</P>
-<div class="wrap-input100 input100">
+<div class="wrap-input100 input100"style="line-height: 2.5;
+padding: 4px 0px 0px 68px;">
 <?php
  echo form_password('password');
 ?>
@@ -58,7 +61,8 @@ echo validation_errors();?>
 </span>
     </div>
  <p><b>Confirm Password</p>
- <div class="wrap-input100 input100">
+ <div class="wrap-input100 input100"style="line-height: 2.5;
+padding: 4px 0px 0px 68px;">
  <?php
  echo form_password('cpassword');
 ?>
@@ -67,7 +71,8 @@ echo validation_errors();?>
 </span>
     </div>
 <p>PhoneNumber</p>
-<div class="wrap-input100 input100">
+<div class="wrap-input100 input100"style="line-height: 2.5;
+padding: 4px 0px 0px 68px;">
 <?php
  echo form_input('phonenumber');
  ?>
@@ -90,7 +95,7 @@ echo validation_errors();?>
 			<option>Other</option>
 		</select><br>
 
- <button type="submit" id="btn">Sign Up</button>
+
 
           <div class="container-login100-form-btn">
 						<button type="submit" class="login100-form-btn">
