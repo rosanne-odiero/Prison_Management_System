@@ -115,6 +115,7 @@ public function is_key_valid($enkey)
 			parent::__construct();
 			$this->load->helper('url');
 		}
+		//This is a test change
 
 	}
 	
